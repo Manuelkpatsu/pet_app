@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'theme/custom_theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,26 +11,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
-    );
-  }
-}
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onTap: () {
+        FocusScopeNode currentFocus = FocusScope.of(context);
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
+        if (!currentFocus.hasPrimaryFocus && currentFocus.focusedChild != null) {
+          FocusManager.instance.primaryFocus?.unfocus();
+        }
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: CustomTheme.theme,
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Home Page'),
+          ),
+          body: const Center(child: Text('Welcome')),
+        ),
       ),
-      body: const Center(child: Text('Welcome')),
     );
   }
 }
