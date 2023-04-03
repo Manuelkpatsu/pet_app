@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'onboard/onboard_screen.dart';
+import 'screen/onboard/onboard_screen.dart';
 import 'router.dart';
 import 'theme/custom_theme.dart';
 
