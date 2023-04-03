@@ -108,6 +108,10 @@ class TextInputField extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius),
           borderSide: const BorderSide(color: CustomColor.alertColor, width: 1.0),
         ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+          borderSide: const BorderSide(color: CustomColor.alertColor, width: 1.0),
+        ),
         filled: true,
         fillColor: fillColor ?? Colors.white,
         hintText: hintText,

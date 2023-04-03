@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/screen/auth/login/login_screen.dart';
+import 'package:pet_app/screen/auth/otp_verification/otp_verification_screen.dart';
 import 'package:pet_app/screen/auth/register/widget/already_have_account.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/screen/widget/text_input_field.dart';
@@ -56,7 +57,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   controller: _emailController,
                   hintText: 'Email',
                   inputType: TextInputType.emailAddress,
-                  inputAction: TextInputAction.next,
+                  inputAction: TextInputAction.done,
                   validator: Validator.email,
                 ),
                 const SizedBox(height: 100),
@@ -65,7 +66,13 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
                 const SizedBox(height: 30),
                 CustomButton(
-                  onPressed: _isEnabled ? () {} : null,
+                  onPressed: _isEnabled
+                      ? () {
+                          if (_forgotPasswordFormKey.currentState!.validate()) {
+                            Navigator.of(context).pushNamed(OTPVerificationScreen.routeName);
+                          }
+                        }
+                      : null,
                   widget: const Text('Next'),
                 ),
                 const SizedBox(height: 50),
