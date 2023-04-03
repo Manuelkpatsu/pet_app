@@ -13,4 +13,6 @@ class CustomColor {
   static const Color greyContainerColor = Color(0xffe7e7e7);
   static const Color sellerBackgroundColor = Color(0xffededed);
   static const Color appBarIconColor = Color(0xff130f26);
+  static const Color orColor = Color(0xffc6cedd);
+  static const Color dividerColor = Color(0xffe3e8f1);
 }

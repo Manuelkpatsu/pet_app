@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/models/onboard_data.dart';
+import 'package:pet_app/screen/auth/login/login_screen.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/theme/custom_color.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -87,12 +88,12 @@ class _OnboardScreenState extends State<OnboardScreen> {
               const SizedBox(height: 50),
               CustomButton(
                 widget: lastPage ? const Text("Get Started") : const Text("Next"),
-                onPressed: () => lastPage
-                    ? () {}
-                    : _controller.nextPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeIn,
-                      ),
+                onPressed: lastPage
+                    ? () => Navigator.of(context).pushReplacementNamed(LoginScreen.routeName)
+                    : () => _controller.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeIn,
+                        ),
               ),
             ],
           ),

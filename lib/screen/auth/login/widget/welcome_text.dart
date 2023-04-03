@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class OnboardTitleText extends StatelessWidget {
-  final String title;
-
-  const OnboardTitleText({Key? key, required this.title}) : super(key: key);
+class WelcomeText extends StatelessWidget {
+  const WelcomeText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
+    return const Text(
+      'Hello,\nWelcome Back!',
+      style: TextStyle(
         color: Colors.black,
         fontSize: 40,
         fontWeight: FontWeight.w600,
