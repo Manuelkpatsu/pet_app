@@ -62,7 +62,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 TextInputField(
                   controller: _fullNameController,
                   hintText: 'Full Name',
-                  inputType: TextInputType.name,
                   inputAction: TextInputAction.next,
                   validator: Validator.fullName,
                   textCapitalization: TextCapitalization.words,

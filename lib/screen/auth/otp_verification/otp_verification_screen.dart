@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pet_app/screen/auth/login/login_screen.dart';
 import 'package:pet_app/screen/auth/register/widget/already_have_account.dart';
+import 'package:pet_app/screen/auth/reset_password/reset_password_screen.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/theme/custom_color.dart';
 import 'package:pet_app/utils/validator.dart';
@@ -91,7 +92,11 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               ),
               const SizedBox(height: 30),
               CustomButton(
-                onPressed: _isEnabled ? () {} : null,
+                onPressed: _isEnabled ? () {
+                  if (_otpFormKey.currentState!.validate()) {
+                    Navigator.of(context).pushNamed(ResetPasswordScreen.routeName);
+                  }
+                } : null,
                 widget: const Text('Verify'),
               ),
               const SizedBox(height: 50),
