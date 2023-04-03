@@ -20,6 +20,7 @@ class CustomTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: CustomColor.primaryColor,
+          disabledBackgroundColor: CustomColor.textFieldBorderColor,
           textStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w700,

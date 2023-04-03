@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screen/auth/login/login_screen.dart';
+import 'screen/auth/register/register_screen.dart';
 import 'screen/onboard/onboard_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -9,6 +10,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const OnboardScreen());
     case LoginScreen.routeName:
       return MaterialPageRoute(builder: (_) => const LoginScreen());
+    case RegisterScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const RegisterScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
