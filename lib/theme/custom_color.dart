@@ -15,4 +15,6 @@ class CustomColor {
   static const Color appBarIconColor = Color(0xff130f26);
   static const Color orColor = Color(0xffc6cedd);
   static const Color dividerColor = Color(0xffe3e8f1);
+  static const Color darkColor = Color(0xff121212);
+  static const Color darkGreyColor = Color(0xff595959);
 }
