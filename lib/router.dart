@@ -7,7 +7,7 @@ import 'screen/auth/register/register_screen.dart';
 import 'screen/auth/reset_password/reset_password_screen.dart';
 import 'screen/main/app.dart';
 import 'screen/main/cart/cart_screen.dart';
-import 'screen/main/chat/chat_screen.dart';
+import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
 import 'screen/onboard/onboard_screen.dart';
@@ -30,8 +30,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const MainApp());
     case HomeScreen.routeName:
       return MaterialPageRoute(builder: (_) => const HomeScreen());
-    case ChatScreen.routeName:
-      return MaterialPageRoute(builder: (_) => const ChatScreen());
+    case FavoriteScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const FavoriteScreen());
     case CartScreen.routeName:
       return MaterialPageRoute(builder: (_) => const CartScreen());
     case ProfileScreen.routeName:

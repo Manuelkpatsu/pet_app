@@ -4,7 +4,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/theme/custom_color.dart';
 
 import 'cart/cart_screen.dart';
-import 'chat/chat_screen.dart';
+import 'favorite/favorite_screen.dart';
 import 'home/home_screen.dart';
 import 'profile/profile_screen.dart';
 
@@ -21,35 +21,39 @@ class _MainAppState extends State<MainApp> {
   late PersistentTabController _controller;
   List<Widget> _buildScreens() => [
         const HomeScreen(),
-        const ChatScreen(),
+        const FavoriteScreen(),
         const CartScreen(),
         const ProfileScreen(),
       ];
 
   List<PersistentBottomNavBarItem> _navBarsItems() => [
         PersistentBottomNavBarItem(
-          icon: const Icon(IconlyBold.home, size: 24),
-          inactiveIcon: const Icon(IconlyLight.home, size: 24),
+          icon: const Icon(IconlyBold.home),
+          inactiveIcon: const Icon(IconlyLight.home),
           activeColorPrimary: CustomColor.primaryColor,
           inactiveColorPrimary: CustomColor.hintColor,
+          iconSize: 24,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(IconlyBold.chat, size: 24),
-          inactiveIcon: const Icon(IconlyLight.chat, size: 24),
+          icon: const Icon(IconlyBold.heart),
+          inactiveIcon: const Icon(IconlyLight.heart),
           activeColorPrimary: CustomColor.primaryColor,
           inactiveColorPrimary: CustomColor.hintColor,
+          iconSize: 24,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(IconlyBold.bag, size: 24),
-          inactiveIcon: const Icon(IconlyLight.bag, size: 24),
+          icon: const Icon(IconlyBold.bag),
+          inactiveIcon: const Icon(IconlyLight.bag),
           activeColorPrimary: CustomColor.primaryColor,
           inactiveColorPrimary: CustomColor.hintColor,
+          iconSize: 24,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(IconlyBold.profile, size: 24),
-          inactiveIcon: const Icon(IconlyLight.profile, size: 24),
+          icon: const Icon(IconlyBold.profile),
+          inactiveIcon: const Icon(IconlyLight.profile),
           activeColorPrimary: CustomColor.primaryColor,
           inactiveColorPrimary: CustomColor.hintColor,
+          iconSize: 24,
         ),
       ];
   int _initialIndex = 0;
