@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/screen/auth/forgot_password/forgot_password_screen.dart';
 import 'package:pet_app/screen/auth/register/register_screen.dart';
+import 'package:pet_app/screen/main/app.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/screen/widget/custom_divider.dart';
 import 'package:pet_app/screen/widget/password_input_field.dart';
@@ -103,7 +104,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 30),
                 CustomButton(
-                  onPressed: _isEnabled ? () {} : null,
+                  onPressed: _isEnabled
+                      ? () {
+                          if (_loginFormKey.currentState!.validate()) {
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                              MainApp.routeName,
+                              (route) => false,
+                            );
+                          }
+                        }
+                      : null,
                   widget: const Text('Login'),
                 ),
                 const SizedBox(height: 50),

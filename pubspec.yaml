@@ -17,6 +17,7 @@ dependencies:
   smooth_page_indicator: ^1.0.1
   intl: ^0.18.0
   pin_code_fields: ^7.4.0
+  persistent_bottom_nav_bar: ^5.0.2
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
