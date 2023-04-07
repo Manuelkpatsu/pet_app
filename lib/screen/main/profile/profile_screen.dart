@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/settings/settings_screen.dart';
 import 'package:pet_app/theme/custom_color.dart';
 
 import 'profile_account/profile_account.dart';
@@ -61,7 +63,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              PersistentNavBarNavigator.pushNewScreen(
+                context,
+                screen: const SettingsScreen(),
+                withNavBar: false,
+              );
+            },
             splashRadius: 20,
             icon: const Icon(IconlyBold.setting, color: CustomColor.primaryColor),
           ),

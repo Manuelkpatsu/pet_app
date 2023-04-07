@@ -10,6 +10,7 @@ import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
+import 'screen/main/settings/settings_screen.dart';
 import 'screen/onboard/onboard_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -36,6 +37,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const CartScreen());
     case ProfileScreen.routeName:
       return MaterialPageRoute(builder: (_) => const ProfileScreen());
+    case SettingsScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const SettingsScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
