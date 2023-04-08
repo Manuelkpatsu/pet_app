@@ -12,6 +12,7 @@ import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
 import 'screen/main/settings/notification_settings/notification_settings_screen.dart';
 import 'screen/main/settings/privacy/privacy_screen.dart';
+import 'screen/main/settings/security/change_password/change_password_screen.dart';
 import 'screen/main/settings/security/security_screen.dart';
 import 'screen/main/settings/settings_screen.dart';
 import 'screen/onboard/onboard_screen.dart';
@@ -48,6 +49,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const PrivacyScreen());
     case SecurityScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SecurityScreen());
+    case ChangePasswordScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

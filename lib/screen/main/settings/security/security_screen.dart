@@ -4,6 +4,8 @@ import 'package:pet_app/screen/main/settings/widget/nav_tile.dart';
 import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 
+import 'change_password/change_password_screen.dart';
+
 class SecurityScreen extends StatelessWidget {
   static const routeName = '/security';
 
@@ -23,7 +25,9 @@ class SecurityScreen extends StatelessWidget {
           const SectionText(section: 'Security'),
           const SizedBox(height: 10),
           NavTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(ChangePasswordScreen.routeName);
+            },
             title: 'Change Password',
             icon: IconlyLight.notification,
           ),
