@@ -4,6 +4,7 @@ import 'package:pet_app/screen/main/settings/widget/nav_tile.dart';
 import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 
+import 'change_email/change_email_screen.dart';
 import 'change_password/change_password_screen.dart';
 
 class SecurityScreen extends StatelessWidget {
@@ -29,12 +30,14 @@ class SecurityScreen extends StatelessWidget {
               Navigator.of(context).pushNamed(ChangePasswordScreen.routeName);
             },
             title: 'Change Password',
-            icon: IconlyLight.notification,
+            icon: IconlyLight.password,
           ),
           NavTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(ChangeEmailScreen.routeName);
+            },
             title: 'Change Email',
-            icon: IconlyLight.wallet,
+            icon: IconlyLight.password,
           ),
           const SizedBox(height: 50),
         ],
