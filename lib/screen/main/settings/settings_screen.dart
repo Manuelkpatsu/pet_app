@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_outline_button.dart';
 
+import 'faq/faq_screen.dart';
 import 'notification_settings/notification_settings_screen.dart';
 import 'privacy/privacy_screen.dart';
 import 'security/security_screen.dart';
@@ -73,7 +74,9 @@ class SettingsScreen extends StatelessWidget {
               icon: IconlyLight.call,
             ),
             NavTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(FAQScreen.routeName);
+              },
               title: 'FAQ',
               icon: IconlyLight.document,
             ),

@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 
 class SectionText extends StatelessWidget {
   final String section;
+  final EdgeInsetsGeometry padding;
 
-  const SectionText({Key? key, required this.section}) : super(key: key);
+  const SectionText({
+    Key? key,
+    required this.section,
+    this.padding = const EdgeInsets.symmetric(horizontal: 24),
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: padding,
       child: Text(
         section,
         style: const TextStyle(

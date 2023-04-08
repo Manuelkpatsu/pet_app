@@ -10,6 +10,7 @@ import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
+import 'screen/main/settings/faq/faq_screen.dart';
 import 'screen/main/settings/notification_settings/notification_settings_screen.dart';
 import 'screen/main/settings/privacy/privacy_screen.dart';
 import 'screen/main/settings/security/change_email/change_email_screen.dart';
@@ -54,6 +55,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
     case ChangeEmailScreen.routeName:
       return MaterialPageRoute(builder: (_) => const ChangeEmailScreen());
+    case FAQScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const FAQScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
