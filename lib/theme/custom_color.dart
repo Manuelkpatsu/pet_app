@@ -17,4 +17,5 @@ class CustomColor {
   static const Color dividerColor = Color(0xffe3e8f1);
   static const Color darkColor = Color(0xff121212);
   static const Color darkGreyColor = Color(0xff595959);
+  static const Color inactiveTrackColor = Color(0xffcccccc);
 }

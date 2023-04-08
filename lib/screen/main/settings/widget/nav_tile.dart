@@ -17,7 +17,7 @@ class NavTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Ink(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
         color: Colors.white,

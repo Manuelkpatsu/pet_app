@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_outline_button.dart';
 
+import 'notification_settings/notification_settings_screen.dart';
 import 'widget/nav_tile.dart';
 import 'widget/section_text.dart';
 
@@ -36,7 +37,9 @@ class SettingsScreen extends StatelessWidget {
               icon: IconlyLight.home,
             ),
             NavTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(NotificationSettingsScreen.routeName);
+              },
               title: 'Notification',
               icon: IconlyLight.notification,
             ),

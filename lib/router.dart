@@ -10,6 +10,7 @@ import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
+import 'screen/main/settings/notification_settings/notification_settings_screen.dart';
 import 'screen/main/settings/settings_screen.dart';
 import 'screen/onboard/onboard_screen.dart';
 
@@ -39,6 +40,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const ProfileScreen());
     case SettingsScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SettingsScreen());
+    case NotificationSettingsScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const NotificationSettingsScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
