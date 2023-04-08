@@ -4,6 +4,7 @@ import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_outline_button.dart';
 
 import 'notification_settings/notification_settings_screen.dart';
+import 'privacy/privacy_screen.dart';
 import 'widget/nav_tile.dart';
 import 'widget/section_text.dart';
 
@@ -49,7 +50,9 @@ class SettingsScreen extends StatelessWidget {
               icon: IconlyLight.wallet,
             ),
             NavTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(PrivacyScreen.routeName);
+              },
               title: 'Privacy',
               icon: IconlyLight.danger,
             ),
