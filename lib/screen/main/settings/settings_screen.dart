@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_outline_button.dart';
 
+import 'contact_us/contact_us_screen.dart';
 import 'faq/faq_screen.dart';
 import 'notification_settings/notification_settings_screen.dart';
 import 'privacy/privacy_screen.dart';
@@ -69,7 +70,9 @@ class SettingsScreen extends StatelessWidget {
             const SectionText(section: 'Help'),
             const SizedBox(height: 10),
             NavTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(ContactUsScreen.routeName);
+              },
               title: 'Contact Us',
               icon: IconlyLight.call,
             ),

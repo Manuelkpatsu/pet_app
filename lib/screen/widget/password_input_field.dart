@@ -75,6 +75,8 @@ class PasswordInputField extends StatelessWidget {
         filled: true,
         fillColor: fillColor ?? Colors.white,
         hintText: hintText,
+        prefixIconColor: CustomColor.hintColor,
+        suffixIconColor: CustomColor.hintColor,
         hintStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,

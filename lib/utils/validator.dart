@@ -90,6 +90,14 @@ class Validator {
     return null;
   };
 
+  static FormFieldValidator<String> message = (message) {
+    if (message == null || message.isEmpty) {
+      return 'Message is required.';
+    }
+
+    return null;
+  };
+
   static FormFieldValidator<String>? cvv = (cvv) {
     if (cvv == null || cvv.isEmpty) {
       return 'CVV is required';

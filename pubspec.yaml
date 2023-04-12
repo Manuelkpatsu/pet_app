@@ -18,6 +18,7 @@ dependencies:
   intl: ^0.18.0
   pin_code_fields: ^7.4.0
   persistent_bottom_nav_bar: ^5.0.2
+  file_picker: ^5.2.8
   cupertino_icons: ^1.0.2
 
 dev_dependencies:

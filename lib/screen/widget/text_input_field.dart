@@ -119,6 +119,8 @@ class TextInputField extends StatelessWidget {
         prefixText: prefixText,
         suffixStyle: suffixTextStyle,
         prefixStyle: prefixTextStyle,
+        prefixIconColor: CustomColor.hintColor,
+        suffixIconColor: CustomColor.hintColor,
         hintStyle: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
