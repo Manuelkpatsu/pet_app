@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/models/payment_method.dart';
+import 'package:pet_app/screen/main/settings/add_new_payment_method/add_new_payment_method_screen.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 
@@ -68,7 +69,9 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               ),
             ),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(AddNewPaymentMethodScreen.routeName);
+              },
               widget: const Text('Add New Payment Method'),
             ),
             const SizedBox(height: 40),
