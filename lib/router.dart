@@ -13,6 +13,7 @@ import 'screen/main/profile/profile_screen.dart';
 import 'screen/main/settings/contact_us/contact_us_screen.dart';
 import 'screen/main/settings/faq/faq_screen.dart';
 import 'screen/main/settings/notification_settings/notification_settings_screen.dart';
+import 'screen/main/settings/payment_method/payment_method_screen.dart';
 import 'screen/main/settings/privacy/privacy_screen.dart';
 import 'screen/main/settings/security/change_email/change_email_screen.dart';
 import 'screen/main/settings/security/change_password/change_password_screen.dart';
@@ -60,6 +61,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const FAQScreen());
     case ContactUsScreen.routeName:
       return MaterialPageRoute(builder: (_) => const ContactUsScreen());
+    case PaymentMethodScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const PaymentMethodScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

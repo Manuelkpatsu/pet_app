@@ -6,6 +6,7 @@ import 'package:pet_app/screen/widget/custom_outline_button.dart';
 import 'contact_us/contact_us_screen.dart';
 import 'faq/faq_screen.dart';
 import 'notification_settings/notification_settings_screen.dart';
+import 'payment_method/payment_method_screen.dart';
 import 'privacy/privacy_screen.dart';
 import 'security/security_screen.dart';
 import 'widget/nav_tile.dart';
@@ -48,7 +49,9 @@ class SettingsScreen extends StatelessWidget {
               icon: IconlyLight.notification,
             ),
             NavTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(PaymentMethodScreen.routeName);
+              },
               title: 'Payment Method',
               icon: IconlyLight.wallet,
             ),
