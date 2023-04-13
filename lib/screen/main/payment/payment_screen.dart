@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:pet_app/models/payment_method.dart';
-import 'package:pet_app/screen/main/settings/add_new_payment_method/add_new_payment_method_screen.dart';
+import 'package:pet_app/screen/main/payment_success/payment_success_screen.dart';
 import 'package:pet_app/screen/main/settings/payment_method/widget/payment_method_tile.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
@@ -76,7 +76,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
             CustomButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(AddNewPaymentMethodScreen.routeName);
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  PaymentSuccessScreen.routeName,
+                  (route) => false,
+                );
               },
               widget: Text('Pay ₵$formattedAmount Now'),
             ),
