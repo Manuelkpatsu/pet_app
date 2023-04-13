@@ -3,9 +3,14 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:iconly/iconly.dart';
 import 'package:pet_app/models/product.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
+import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/theme/custom_color.dart';
 
+import 'widget/amount_text.dart';
 import 'widget/cart_tile.dart';
+import 'widget/description_text.dart';
+import 'widget/total_amount_text.dart';
+import 'widget/total_text.dart';
 
 class CartScreen extends StatefulWidget {
   static const routeName = '/cart';
@@ -51,9 +56,12 @@ class _CartScreenState extends State<CartScreen> {
           "The Persian cat has the longest and densest coat of all cat breeds. This means that it typically needs to consume more skin-health focused nutrients than other cat breeds. That’s why ROYAL CANIN® Persian Adult contains an exclusive complex of nutrients to help the skin’s barrier defence role to maintain good skin and coat health.",
     ),
   ];
+  final double _taxAmount = 1.99;
 
   @override
   Widget build(BuildContext context) {
+    final totalAmount = _items.fold(0.0, (previous, current) => previous + current.price);
+
     return Scaffold(
       appBar: AppBar(
         title: const AppBarTitle(title: 'Cart'),
@@ -102,6 +110,54 @@ class _CartScreenState extends State<CartScreen> {
             ),
           );
         },
+      ),
+      bottomSheet: IntrinsicHeight(
+        child: Container(
+          padding: const EdgeInsets.only(left: 24, right: 24, top: 20, bottom: 60),
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.04),
+                offset: const Offset(4, -4),
+                blurRadius: 20,
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  DescriptionText(description: '${_items.length} Items'),
+                  AmountText(amount: totalAmount),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const DescriptionText(description: 'Tax'),
+                  AmountText(amount: _taxAmount),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const TotalText(),
+                  TotalAmountText(amount: totalAmount + _taxAmount),
+                ],
+              ),
+              const SizedBox(height: 25),
+              CustomButton(
+                onPressed: () {},
+                widget: const Text('Checkout'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
