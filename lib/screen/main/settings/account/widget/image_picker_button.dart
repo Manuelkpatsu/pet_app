@@ -28,8 +28,8 @@ class ImagePickerButton extends StatelessWidget {
       child: Material(
         type: MaterialType.canvas,
         child: InkWell(
-          borderRadius: BorderRadius.circular(8),
           onTap: onPressed,
+          customBorder: const CircleBorder(),
           child: Ink(
             width: 24,
             height: 24,

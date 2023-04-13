@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_app/models/product.dart';
 import 'package:pet_app/theme/custom_color.dart';
 
+import 'widget/add_to_cart_button.dart';
 import 'widget/product_image.dart';
 import 'widget/product_name.dart';
 import 'widget/product_price.dart';
@@ -34,6 +35,7 @@ class ProductTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ProductPrice(price: product.price),
+                  AddToCartButton(onPressed: () {}),
                 ],
               ),
             ],
