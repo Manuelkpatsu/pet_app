@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:iconly/iconly.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/payment/payment_screen.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 import 'package:pet_app/theme/custom_color.dart';
@@ -152,7 +154,13 @@ class _CartScreenState extends State<CartScreen> {
               ),
               const SizedBox(height: 25),
               CustomButton(
-                onPressed: () {},
+                onPressed: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: PaymentScreen(amount: totalAmount + _taxAmount),
+                    withNavBar: false,
+                  );
+                },
                 widget: const Text('Checkout'),
               ),
             ],
