@@ -10,8 +10,9 @@ import 'widget/product_price.dart';
 class ProductTile extends StatelessWidget {
   final Product product;
   final VoidCallback? onTap;
+  final VoidCallback? onAddToCartTap;
 
-  const ProductTile({Key? key, required this.product, required this.onTap}) : super(key: key);
+  const ProductTile({Key? key, required this.product, required this.onTap, required this.onAddToCartTap,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class ProductTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ProductPrice(price: product.price),
-                  AddToCartButton(onPressed: () {}),
+                  AddToCartButton(onPressed: onAddToCartTap),
                 ],
               ),
             ],

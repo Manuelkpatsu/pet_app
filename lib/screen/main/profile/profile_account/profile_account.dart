@@ -45,6 +45,7 @@ class ProfileAccount extends StatelessWidget {
                 return ProductTile(
                   product: savedProduct,
                   onTap: () {},
+                  onAddToCartTap: () {},
                 );
               },
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

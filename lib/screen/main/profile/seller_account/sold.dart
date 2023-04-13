@@ -19,6 +19,7 @@ class SoldProducts extends StatelessWidget {
           return ProductTile(
             product: product,
             onTap: () {},
+            onAddToCartTap: () {},
           );
         },
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
