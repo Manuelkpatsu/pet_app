@@ -10,6 +10,7 @@ import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
+import 'screen/main/settings/account/account_screen.dart';
 import 'screen/main/settings/add_new_payment_method/add_new_payment_method_screen.dart';
 import 'screen/main/settings/contact_us/contact_us_screen.dart';
 import 'screen/main/settings/faq/faq_screen.dart';
@@ -66,6 +67,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const PaymentMethodScreen());
     case AddNewPaymentMethodScreen.routeName:
       return MaterialPageRoute(builder: (_) => const AddNewPaymentMethodScreen());
+    case AccountScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const AccountScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
