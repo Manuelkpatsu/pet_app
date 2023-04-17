@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/models/product.dart';
 
 import 'screen/auth/forgot_password/forgot_password_screen.dart';
 import 'screen/auth/login/login_screen.dart';
@@ -13,6 +14,7 @@ import 'screen/main/home/home_screen.dart';
 import 'screen/main/notification/notification_screen.dart';
 import 'screen/main/payment/payment_screen.dart';
 import 'screen/main/payment_success/payment_success_screen.dart';
+import 'screen/main/product_detail/product_detail_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
 import 'screen/main/search/search_screen.dart';
 import 'screen/main/settings/account/account_screen.dart';
@@ -85,6 +87,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const NotificationScreen());
     case SearchScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SearchScreen());
+    case ProductDetailScreen.routeName:
+      Product argument = settings.arguments as Product;
+      return MaterialPageRoute(builder: (_) => ProductDetailScreen(product: argument));
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

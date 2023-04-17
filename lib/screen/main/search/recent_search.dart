@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/product_detail/product_detail_screen.dart';
 
 import 'widget/recent_search_tile.dart';
 
@@ -55,7 +56,12 @@ class _RecentSearchState extends State<RecentSearch> {
           Product product = _recentSearchProducts[index];
 
           return RecentSearchTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                ProductDetailScreen.routeName,
+                arguments: product,
+              );
+            },
             onDeleteTap: () {
               setState(() {
                 _recentSearchProducts.removeAt(index);

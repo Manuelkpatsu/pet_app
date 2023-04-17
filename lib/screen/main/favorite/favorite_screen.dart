@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/product_detail/product_detail_screen.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
 
@@ -59,13 +61,19 @@ class FavoriteScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: GridView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         itemCount: favorites.length,
         itemBuilder: (context, int index) {
           Product product = favorites[index];
 
           return ProductTile(
-            onTap: () {},
+            onTap: () {
+              PersistentNavBarNavigator.pushNewScreen(
+                context,
+                screen: ProductDetailScreen(product: product),
+                withNavBar: false,
+              );
+            },
             product: product,
             onAddToCartTap: () {},
           );

@@ -4,6 +4,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
 import 'package:pet_app/screen/main/best_seller/best_seller_screen.dart';
 import 'package:pet_app/screen/main/notification/notification_screen.dart';
+import 'package:pet_app/screen/main/product_detail/product_detail_screen.dart';
 import 'package:pet_app/screen/main/search/search_screen.dart';
 import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
@@ -200,9 +201,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Padding(
                     padding: EdgeInsets.only(right: index == _products.length - 1 ? 0 : 15),
                     child: SizedBox(
-                      width: 160,
+                      width: 170,
                       child: ProductTile(
-                        onTap: () {},
+                        onTap: () {
+                          PersistentNavBarNavigator.pushNewScreen(
+                            context,
+                            screen: ProductDetailScreen(product: product),
+                            withNavBar: false,
+                          );
+                        },
                         onAddToCartTap: () {},
                         product: product,
                       ),

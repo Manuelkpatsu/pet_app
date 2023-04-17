@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/product_detail/product_detail_screen.dart';
 import 'package:pet_app/screen/main/profile/widget/account_type.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
 
@@ -44,7 +46,13 @@ class ProfileAccount extends StatelessWidget {
 
                 return ProductTile(
                   product: savedProduct,
-                  onTap: () {},
+                  onTap: () {
+                    PersistentNavBarNavigator.pushNewScreen(
+                      context,
+                      screen: ProductDetailScreen(product: savedProduct),
+                      withNavBar: false,
+                    );
+                  },
                   onAddToCartTap: () {},
                 );
               },

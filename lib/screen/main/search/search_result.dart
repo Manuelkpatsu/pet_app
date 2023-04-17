@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/product_detail/product_detail_screen.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
 
 class SearchResult extends StatefulWidget {
@@ -72,7 +73,12 @@ class _SearchResultState extends State<SearchResult> {
 
           return ProductTile(
             product: product,
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                ProductDetailScreen.routeName,
+                arguments: product,
+              );
+            },
             onAddToCartTap: () {},
           );
         },
