@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:pet_app/models/payment_method.dart';
 import 'package:pet_app/screen/main/payment_success/payment_success_screen.dart';
 import 'package:pet_app/screen/main/settings/payment_method/widget/payment_method_tile.dart';
+import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_button.dart';
 
@@ -52,7 +53,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 10),
+            const SectionText(section: 'Choose your Payment Method', padding: EdgeInsets.zero),
             Expanded(
               child: ListView.builder(
                 padding: const EdgeInsets.symmetric(vertical: 20),
