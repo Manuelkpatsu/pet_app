@@ -3,6 +3,7 @@ import 'package:iconly/iconly.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
 import 'package:pet_app/screen/main/best_seller/best_seller_screen.dart';
+import 'package:pet_app/screen/main/notification/notification_screen.dart';
 import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
 
@@ -83,7 +84,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(width: 12),
                 ActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    PersistentNavBarNavigator.pushNewScreen(
+                      context,
+                      screen: const NotificationScreen(),
+                      withNavBar: false,
+                    );
+                  },
                   icon: IconlyLight.notification,
                 ),
               ],

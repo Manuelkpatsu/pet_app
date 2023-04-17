@@ -10,6 +10,7 @@ import 'screen/main/best_seller/best_seller_screen.dart';
 import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
+import 'screen/main/notification/notification_screen.dart';
 import 'screen/main/payment/payment_screen.dart';
 import 'screen/main/payment_success/payment_success_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
@@ -79,6 +80,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const PaymentSuccessScreen());
     case BestSellerScreen.routeName:
       return MaterialPageRoute(builder: (_) => const BestSellerScreen());
+    case NotificationScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const NotificationScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(

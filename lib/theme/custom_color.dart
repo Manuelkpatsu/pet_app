@@ -19,4 +19,5 @@ class CustomColor {
   static const Color darkGreyColor = Color(0xff595959);
   static const Color inactiveTrackColor = Color(0xffcccccc);
   static const Color radioButtonColor = Color(0xffb8b8b8);
+  static const Color imageColor = Color(0xffd9d9d9);
 }

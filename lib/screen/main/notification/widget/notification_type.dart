@@ -1,0 +1,1 @@
+enum NotificationType { activity, seller }
