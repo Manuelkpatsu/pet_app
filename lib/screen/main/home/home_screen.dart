@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pet_app/models/product.dart';
+import 'package:pet_app/screen/main/best_seller/best_seller_screen.dart';
 import 'package:pet_app/screen/main/settings/widget/section_text.dart';
 import 'package:pet_app/screen/widget/product_tile/product_tile.dart';
 
@@ -159,7 +161,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const SectionText(section: 'Best Seller', padding: EdgeInsets.zero),
-                  ViewAllButton(onPressed: () {}),
+                  ViewAllButton(
+                    onPressed: () {
+                      PersistentNavBarNavigator.pushNewScreen(
+                        context,
+                        screen: const BestSellerScreen(),
+                        withNavBar: false,
+                      );
+                    },
+                  ),
                 ],
               ),
             ),

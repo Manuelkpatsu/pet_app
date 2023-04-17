@@ -6,6 +6,7 @@ import 'screen/auth/otp_verification/otp_verification_screen.dart';
 import 'screen/auth/register/register_screen.dart';
 import 'screen/auth/reset_password/reset_password_screen.dart';
 import 'screen/main/app.dart';
+import 'screen/main/best_seller/best_seller_screen.dart';
 import 'screen/main/cart/cart_screen.dart';
 import 'screen/main/favorite/favorite_screen.dart';
 import 'screen/main/home/home_screen.dart';
@@ -76,6 +77,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => PaymentScreen(amount: argument));
     case PaymentSuccessScreen.routeName:
       return MaterialPageRoute(builder: (_) => const PaymentSuccessScreen());
+    case BestSellerScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const BestSellerScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
