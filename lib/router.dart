@@ -14,6 +14,7 @@ import 'screen/main/notification/notification_screen.dart';
 import 'screen/main/payment/payment_screen.dart';
 import 'screen/main/payment_success/payment_success_screen.dart';
 import 'screen/main/profile/profile_screen.dart';
+import 'screen/main/search/search_screen.dart';
 import 'screen/main/settings/account/account_screen.dart';
 import 'screen/main/settings/add_new_payment_method/add_new_payment_method_screen.dart';
 import 'screen/main/settings/contact_us/contact_us_screen.dart';
@@ -82,6 +83,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const BestSellerScreen());
     case NotificationScreen.routeName:
       return MaterialPageRoute(builder: (_) => const NotificationScreen());
+    case SearchScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const SearchScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
