@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:pet_app/screen/auth/login/login_screen.dart';
 import 'package:pet_app/screen/widget/app_bar_title.dart';
 import 'package:pet_app/screen/widget/custom_outline_button.dart';
+import 'package:pet_app/screen/widget/dialogs/logout_dialog.dart';
 
 import 'account/account_screen.dart';
 import 'contact_us/contact_us_screen.dart';
@@ -13,11 +15,16 @@ import 'security/security_screen.dart';
 import 'widget/nav_tile.dart';
 import 'widget/section_text.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   static const routeName = '/settings';
 
   const SettingsScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +100,15 @@ class SettingsScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: CustomOutlineButton(
-                onPressed: () {},
+                onPressed: () async {
+                  final shouldLogOut = await showLogOutDialog(context);
+                  if (shouldLogOut) {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      LoginScreen.routeName,
+                      (route) => false,
+                    );
+                  }
+                },
                 widget: const Text('Log Out'),
               ),
             ),
