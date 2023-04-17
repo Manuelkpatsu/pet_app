@@ -9,6 +9,7 @@ import 'widget/banner_image.dart';
 import 'widget/category.dart';
 import 'widget/category_filter_button.dart';
 import 'widget/location_name_text.dart';
+import 'widget/location_search.dart';
 import 'widget/mask.dart';
 import 'widget/select_location_button.dart';
 import 'widget/view_all_button.dart';
@@ -68,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SelectLocationButton(onTap: () {}),
+                      SelectLocationButton(onTap: _openLocationModalSheet),
                       const LocationNameText(location: 'Jebres, Surakarta'),
                     ],
                   ),
@@ -190,6 +191,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  void _openLocationModalSheet() {
+    showModalBottomSheet(
+      context: context,
+      barrierColor: Colors.black.withOpacity(0.3),
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(32), bottom: Radius.zero),
+      ),
+      constraints: BoxConstraints.loose(
+        Size(MediaQuery.of(context).size.width, MediaQuery.of(context).size.height * 0.8),
+      ),
+      isScrollControlled: true,
+      builder: (ctx) {
+        return const LocationSearch();
+      },
     );
   }
 }
