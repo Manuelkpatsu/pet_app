@@ -25,6 +25,9 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/5.png" />
         </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/36.png" />
+        </td>
     </tr>
 </table>
 <table>
@@ -44,13 +47,13 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/10.png" />
         </td>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/11.png" />
+        </td>
     </tr>
 </table>
 <table>
     <tr>
-        <td>
-            <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/11.png" />
-        </td>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/12.png" />
         </td>
@@ -63,16 +66,16 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/15.png" />
         </td>
-    </tr>
-</table>
-<table>
-    <tr>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/16.png" />
         </td>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/17.png" />
         </td>
+    </tr>
+</table>
+<table>
+    <tr>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/18.png" />
         </td>
@@ -82,10 +85,6 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/20.png" />
         </td>
-    </tr>
-</table>
-<table>
-    <tr>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/21.png" />
         </td>
@@ -95,16 +94,16 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/23.png" />
         </td>
+    </tr>
+</table>
+<table>
+    <tr>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/24.png" />
         </td>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/25.png" />
         </td>
-    </tr>
-</table>
-<table>
-    <tr>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/26.png" />
         </td>
@@ -117,13 +116,13 @@ A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/29.png" />
         </td>
-        <td>
-            <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/30.png" />
-        </td>
     </tr>
 </table>
 <table>
     <tr>
+        <td>
+            <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/30.png" />
+        </td>
         <td>
             <img src="https://github.com/Manuelkpatsu/pet_app/blob/main/screenshots/31.png" />
         </td>
